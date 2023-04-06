@@ -18,25 +18,44 @@ while (passwordLength < 8 || passwordLength > 128) {
 }
 console.log(passwordLength);
 
-// Do they want uppercase letters?
+// // Do they want uppercase letters?
 
-var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  // if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
+// var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  // if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
 
-// Do they want lowercase letters?
+// console.log(uppercaseLettersWanted);
 
-var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  // if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
+// // Do they want lowercase letters?
 
-// Do they want numbers?
+// var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  // if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
 
-var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  // if Y I need to create function to randomly select a number from the array numbers
+// console.log(lowercaseLettersWanted);
 
-// Do they want special characters?
+// // Do they want numbers?
 
-var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  // if Y I need to create function to randomly select a special character from the array specialCharacters
+// var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  // if Y I need to create function to randomly select a number from the array numbers
+
+// console.log(numbersWanted);
+
+// // Do they want special characters?
+
+// var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  // if Y I need to create function to randomly select a special character from the array specialCharacters
+
+// console.log(specialCharactersWanted);
 
 // Need to validate that the user has chosen at least one character set, if not, start over OR recursively call the function that prompts for the character sets
 
-
+function requiredCharacters() {  //THIS LOGIC WON'T WORK - REDO IN THE MORNING!  NEED TO FORCE ALL CAPITALS THEN CHECK EACH VALUE AGAINST "N" AND IF ALL ARE TRUE, THEN PROMPT AGAIN
+  var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?"); 
+  var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?");
+  var numbersWanted = window.prompt("Do you want to include numbers, Y or N?");
+  var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?");
+  if (uppercaseLettersWanted === lowercaseLettersWanted && uppercaseLettersWanted === numbersWanted && uppercaseLettersWanted === specialCharactersWanted) { // FIX THIS FIRST TOMORROW!!!
+    alert("OOPS!  You did not select at least one character-set for your password.  Please try again!");    // FIX THIS FIRST TOMORROW!!!
+    requiredCharacters();   
+  } else {
+    alert("Awesome! This is a test message.  I will figure out next step soon!");
+  }
+}
 
 
 var passwordInProgress = '';
