@@ -11,33 +11,52 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 // Array of special characters
 var specialCharacters = ["!", "#", "$", "%", "&", "'", "\(", "\)", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "\[", "\\", "\]", "^", "_", "`", "\{", "|", "\}", "~"];
 
-var passwordLength = window.prompt("Please enter the desired length of your password?  Note: must be between 8 and 128 characters!");
+var passwordLength = window.prompt("Please enter the desired length of your password.  Note: Password length must be between 8 and 128 characters!");
 
 while (passwordLength < 8 || passwordLength > 128) {
   passwordLength = window.prompt("I'm sorry, but that is not a valid number! Please enter a new password length between 8 and 128 characters.");
 }
 console.log(passwordLength);
 
+// Do they want uppercase letters?
+
+var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  // if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
+
+// Do they want lowercase letters?
+
+var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  // if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
+
+// Do they want numbers?
+
+var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  // if Y I need to create function to randomly select a number from the array numbers
+
+// Do they want special characters?
+
+var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  // if Y I need to create function to randomly select a special character from the array specialCharacters
+
+// Need to validate that the user has chosen at least one character set, if not, start over OR recursively call the function that prompts for the character sets
 
 
-var password = '';
+
+
+var passwordInProgress = '';
 
 
 function generatePassword() {
 
   //Need the following variables:
-  //selected length of the password
-  //array of lowercase letters
-  //array of uppercase letters
-  //array of numbers letters
-  //array of special characters letters
+  //selected length of the password - done
+  //array of lowercase letters - done
+  //array of uppercase letters - done
+  //array of numbers letters - done
+  //array of special characters letters - done
   //use .split('') to create arrays   - remove from pseudo-code*****
-  //variable to hold the password we are building
+  //variable to hold the password we are building  - done?
   //possibly need var to hold mega array
 
-  //prompt for password length --> stored in a variable
-  //Validate the user input --> if user chooses <8 or >123 alert that they need to choose a valid password length they they need to restart process or call function again
-  //prompt --> Do they want uppercase letters?
+  //prompt for password length --> stored in a variable - done
+  //Validate the user input --> if user chooses <8 or >123 alert that they need to choose a valid password length they they need to restart process or call function again  - done
+  //prompt --> Do they want uppercase letters?  var upperCaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?") --> if Y I need to add a letter
   //prompt --> Do they want lowercase letters?
   //prompt --> Do they want numbers?
   //prompt --> Do they want special characters?
