@@ -2,46 +2,56 @@
 var generateBtn = document.querySelector("#generate");
 
 // My variables:
-
-var passwordLength = ();
-// Array of lowercase letters
+// Array of all lowercase letters in the alphabet
 var lowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-// Array of uppercase letters
+// Array of all uppercase letters in the alphabet
 var uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-// Array of numbers
+// Array of numbers 0-9
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-// Array of special characters used in passwords
-var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '='];
+// Array of special characters
+var specialCharacters = ["!", "#", "$", "%", "&", "'", "\(", "\)", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "\[", "\\", "\]", "^", "_", "`", "\{", "|", "\}", "~"];
+
+var passwordLength = window.prompt("Please enter the desired length of your password?  Note: must be between 8 and 128 characters!");
+
+while (passwordLength < 8 || passwordLength > 128) {
+  passwordLength = window.prompt("I'm sorry, but that is not a valid number! Please enter a new password length between 8 and 128 characters.");
+}
+console.log(passwordLength);
+
+
+
+var password = '';
+
 
 function generatePassword() {
 
   //Need the following variables:
-    //selected length of the password
-    //array of lowercase letters
-    //array of uppercase letters
-    //array of numbers letters
-    //array of special characters letters
-    //use .split('') to create arrays   - remove from pseudo-code*****
-    //variable to hold the password we are building
-    //possibly need var to hold mega array
+  //selected length of the password
+  //array of lowercase letters
+  //array of uppercase letters
+  //array of numbers letters
+  //array of special characters letters
+  //use .split('') to create arrays   - remove from pseudo-code*****
+  //variable to hold the password we are building
+  //possibly need var to hold mega array
 
-    //prompt for password length --> stored in a variable
-    //Validate the user input --> if user chooses <8 or >123 alert that they need to choose a valid password length they they need to restart process or call function again
-    //prompt --> Do they want uppercase letters?
-    //prompt --> Do they want lowercase letters?
-    //prompt --> Do they want numbers?
-    //prompt --> Do they want special characters?
-    //validate that the user has chosen at least one character set -->  if not, either have them start over OR recursively call the function that prompts for the character sets
-    //with each of those prompts, you need an array of those character types
-        //There needs to be at least one of each selected character type included in the password
-        //Randomly generate a character from each character set as it's chosen and add it to the end of the password that you are building  (set up PW as array and use .push at end, or store it as a string and use .concat() to add)
-        //for loop: 
-          //for (var i = password.length - 1; i < passwordLength; i++)   - remove from pseudo-code*****
-        // EITHER keep the character sets separate OR combine them to a mega-array to pull the rest of the characters from
-        // IF keeping the character sets separate, randomly generate number to tell which array you're pulling from, then randomly generate number to pull the character from the array (character will by array[number])
-        // *IF pushing to a mega-array randomly generate a number to pull a character from the array
-        // *IF pushing to mega-array, remember to set the array back to an empty array at the start of the process!
-    //return the generated password and code below will print it to the page - use different name to hold password while it's being generated
+  //prompt for password length --> stored in a variable
+  //Validate the user input --> if user chooses <8 or >123 alert that they need to choose a valid password length they they need to restart process or call function again
+  //prompt --> Do they want uppercase letters?
+  //prompt --> Do they want lowercase letters?
+  //prompt --> Do they want numbers?
+  //prompt --> Do they want special characters?
+  //validate that the user has chosen at least one character set -->  if not, either have them start over OR recursively call the function that prompts for the character sets
+  //with each of those prompts, you need an array of those character types
+  //There needs to be at least one of each selected character type included in the password
+  //Randomly generate a character from each character set as it's chosen and add it to the end of the password that you are building  (set up PW as array and use .push at end, or store it as a string and use .concat() to add)
+  //for loop: 
+  //for (var i = password.length - 1; i < passwordLength; i++)   - remove from pseudo-code*****
+  // EITHER keep the character sets separate OR combine them to a mega-array to pull the rest of the characters from
+  // IF keeping the character sets separate, randomly generate number to tell which array you're pulling from, then randomly generate number to pull the character from the array (character will by array[number])
+  // *IF pushing to a mega-array randomly generate a number to pull a character from the array
+  // *IF pushing to mega-array, remember to set the array back to an empty array at the start of the process!
+  //return the generated password and code below will print it to the page - use different name to hold password while it's being generated
 }
 
 
