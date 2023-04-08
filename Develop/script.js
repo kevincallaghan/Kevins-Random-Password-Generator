@@ -22,7 +22,7 @@ console.log("Number of Characters Wanted: " + passwordLength);
 
 //! var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  
 
-// if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
+//TODO if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
 
 //! console.log(uppercaseLettersWanted); to show how man Uppercase Letters Wanted
 
@@ -30,7 +30,7 @@ console.log("Number of Characters Wanted: " + passwordLength);
 
 //! var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  
 
-// if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
+//TODO if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
 
 //! console.log(lowercaseLettersWanted); to show how many Lowercase Letters Wanted
 
@@ -38,7 +38,7 @@ console.log("Number of Characters Wanted: " + passwordLength);
 
 //! var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  
 
-// if Y I need to create function to randomly select a number from the array numbers
+//TODO if Y I need to create function to randomly select a number from the array numbers
 
 //!console.log(numbersWanted); to show how many Numbers Wanted
 
@@ -46,7 +46,7 @@ console.log("Number of Characters Wanted: " + passwordLength);
 
 //! var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  
 
-// if Y I need to create function to randomly select a special character from the array specialCharacters
+//TODO if Y I need to create function to randomly select a special character from the array specialCharacters
 
 //! console.log(specialCharactersWanted); to show how many Special Characters Wanted
 
@@ -59,19 +59,33 @@ var specialCharactersWanted = '';
 
 while (uppercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'Y' && numbersWanted !== 'Y' && specialCharactersWanted !== 'Y') {
   
+  //TODO These seem messy and need to be combined - possibly with a function?  ***LOOK INTO CLEANING THIS UP***
   uppercaseLettersWanted = window.prompt('Do you want to include uppercase letters, Y or N?').toUpperCase();
+  while (uppercaseLettersWanted !== 'Y' && uppercaseLettersWanted !== 'N') {
+    uppercaseLettersWanted = window.prompt('Oops, you entered something other than Y or N.  Please answer again!  Do you want to include uppercase letters, Y or N?').toUpperCase();
+  }
+
   lowercaseLettersWanted = window.prompt("Do you want to include lowercase letters, Y or N?").toUpperCase();
+  while (lowercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'N') {
+    lowercaseLettersWanted = window.prompt('Oops, you entered something other than Y or N.  Please answer again!  Do you want to include lowercase letters, Y or N?').toUpperCase();
+  }
+
   numbersWanted = window.prompt("Do you want to include numbers, Y or N?").toUpperCase();
+  while (numbersWanted !== 'Y' && numbersWanted !== 'N') {
+    numbersWanted = window.prompt('Oops, you entered something other than Y or N.  Please answer again!  Do you want to include numbers, Y or N?').toUpperCase();
+  }
+
   specialCharactersWanted = window.prompt("Do you want to include special characters, Y or N?").toUpperCase();
+    while (specialCharactersWanted !== 'Y' && specialCharactersWanted !== 'N') {
+      specialCharactersWanted = window.prompt('Oops, you entered something other than Y or N.  Please answer again!  Do you want to include special characters, Y or N?').toUpperCase();
+  }
 
   if (uppercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'Y' && numbersWanted !== 'Y' && specialCharactersWanted !== 'Y') {
     alert('OOPS!  You did not select at least one character-set for your password.  Please try again!');
   }
 }
 
-while (uppercaseLettersWanted !== 'Y' && uppercaseLettersWanted !== 'N') {
-  uppercaseLettersWanted = window.prompt('Oops, you entered something other than Y or N.  Please answer again!  Do you want to include uppercase letters, Y or N?').toUpperCase();
-}
+
 
 console.log("Uppercase Letters Wanted: " + uppercaseLettersWanted);
 console.log("Lowercase Letters Wanted: " + lowercaseLettersWanted);
