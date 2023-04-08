@@ -150,13 +150,14 @@ console.log(charactersSelectedForPassword);
 
 
 //TODO Randomly generate the rest of my passwordInProgress to equal the passwordLength input selected by the user
-
-for (var i = 0; i < passwordLength; i++) {
-passwordInProgress.push(charactersSelectedForPassword[Math.floor(Math.random() * passwordLength + 1)]);
+var passwordInProgressCount = passwordInProgress.length;
+console.log('pw count ' + passwordInProgressCount)
+console.log(typeof passwordInProgressCount)
+for (var i = passwordInProgressCount; i < passwordLength; i++) {
+  passwordInProgress.push(charactersSelectedForPassword[Math.floor(Math.random() * charactersSelectedForPassword.length)]);
 }
 
-
-console.log(passwordInProgress);
+console.log('password in progress is ' + passwordInProgress);
 
 function generatePassword() {
 
