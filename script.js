@@ -164,7 +164,6 @@ console.log('password in progress is ' + passwordInProgress);
 
 
 function generatePassword() {
-
 }
 
 
@@ -177,9 +176,15 @@ function writePassword() {
 
 }
 
+//Alert to click red Generate button
+window.alert('Thank you for your input.  Please click the "Generate Password" button for your new password!')
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//Adding a refresh button so they can refresh the program and start again
+var generateRefreshBtn = document.querySelector("#refresh");
 
-
-
+generateRefreshBtn.addEventListener("click", function() {
+  location.reload();
+});
