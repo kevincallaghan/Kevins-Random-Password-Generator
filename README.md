@@ -29,7 +29,7 @@ To use this program, visit the link above and:
 
 Preview of initial page:
 
- ![Password Generator Initial Prompt](assets/images/README-SCREENSHOT.jpg) 
+ ![Password Generator Initial Prompt](Assets/images/README-SCREENSHOT.jpg) 
 
 
 ## Credits
