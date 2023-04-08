@@ -26,6 +26,9 @@ To use this program, visit the link above and:
 6. Once you receive the 'Thank You' message, click the "Generate Password" button to view your new randomly generated password.
 7. Click 'Try Again' to reload the page and create a new password
 
+
+Preview of initial page:
+
  ![Password Generator Initial Prompt](assets/images/README-SCREENSHOT.jpg) 
 
 
