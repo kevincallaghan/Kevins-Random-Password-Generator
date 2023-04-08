@@ -2,16 +2,10 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This project is a random password generator designed to get input from the user and then provide them with a randomly generated password that meets the user's input criteria.  It will give the user the option of uppercase letters, lowercase letters, numbers, and special characters, and also allow the user to set the password length between 8 and 128 characters.  There are validations in place to ensure all inputs are acceptable throughout the user's input process.  During this project I learned a lot about javascript variables, operators, for loops, while loops, and some of the built in functions such as push and join.  I also got a better understanding of using an event listener to execute a command.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Usage](#usage)
 - [Credits](#credits)
@@ -20,13 +14,20 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Link to deployed page: https://kevincallaghan.github.io/Kevins-Random-Password-Generator/ 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+To use this program, visit the link above and:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+1. Enter the desired password length, between 8 and 128 characters.
+2. Select Y or N if you would like to include uppercase letters in your password.
+3. Select Y or N if you would like to include lowercase letters in your password.
+4. Select Y or N if you would like to include numbers in your password.
+5. Select Y or N if you would like to include special characters in your password.
+6. Once you receive the 'Thank You' message, click the "Generate Password" button to view your new randomly generated password.
+7. Click 'Try Again' to reload the page and create a new password
+
+ ![Password Generator Initial Prompt](assets/images/README-SCREENSHOT.jpg) 
+
 
 ## Credits
 
@@ -39,8 +40,6 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 4. I found the correct usage of push(); to merge two arrays together on developer.mozilla.org.  I am using this to combine the character sets chosen by the user so I can randomly pull from and complete my password.  The article can be found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push 
 
 
-
 ## License
 
 Please refer to the LICENSE document in the repository for License information.
-
