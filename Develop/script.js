@@ -16,46 +16,69 @@ var passwordLength = window.prompt("Please enter the desired length of your pass
 while (passwordLength < 8 || passwordLength > 128) {
   passwordLength = window.prompt("I'm sorry, but that is not a valid number! Please enter a new password length between 8 and 128 characters.");
 }
-console.log(passwordLength);
+console.log("Number of Characters Wanted: " + passwordLength);
 
-// // Do they want uppercase letters?
+// Do they want uppercase letters?
 
-// var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  // if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
+//! var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  
 
-// console.log(uppercaseLettersWanted);
+// if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
 
-// // Do they want lowercase letters?
+//! console.log(uppercaseLettersWanted); to show how man Uppercase Letters Wanted
 
-// var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  // if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
+// Do they want lowercase letters?
 
-// console.log(lowercaseLettersWanted);
+//! var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  
 
-// // Do they want numbers?
+// if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
 
-// var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  // if Y I need to create function to randomly select a number from the array numbers
+//! console.log(lowercaseLettersWanted); to show how many Lowercase Letters Wanted
 
-// console.log(numbersWanted);
+// Do they want numbers?
 
-// // Do they want special characters?
+//! var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  
 
-// var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  // if Y I need to create function to randomly select a special character from the array specialCharacters
+// if Y I need to create function to randomly select a number from the array numbers
 
-// console.log(specialCharactersWanted);
+//!console.log(numbersWanted); to show how many Numbers Wanted
 
-// Need to validate that the user has chosen at least one character set, if not, start over OR recursively call the function that prompts for the character sets
+// Do they want special characters?
 
-function requiredCharacters() {  //THIS LOGIC WON'T WORK - REDO IN THE MORNING!  NEED TO FORCE ALL CAPITALS THEN CHECK EACH VALUE AGAINST "N" AND IF ALL ARE TRUE, THEN PROMPT AGAIN
-  var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?"); 
-  var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?");
-  var numbersWanted = window.prompt("Do you want to include numbers, Y or N?");
-  var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?");
-  if (uppercaseLettersWanted === lowercaseLettersWanted && uppercaseLettersWanted === numbersWanted && uppercaseLettersWanted === specialCharactersWanted) { // FIX THIS FIRST TOMORROW!!!
-    alert("OOPS!  You did not select at least one character-set for your password.  Please try again!");    // FIX THIS FIRST TOMORROW!!!
-    requiredCharacters();   
-  } else {
-    alert("Awesome! This is a test message.  I will figure out next step soon!");
+//! var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  
+
+// if Y I need to create function to randomly select a special character from the array specialCharacters
+
+//! console.log(specialCharactersWanted); to show how many Special Characters Wanted
+
+//! Did they pick at least one?  If not, they must select values again (use while if statement)
+
+var uppercaseLettersWanted = '';
+var lowercaseLettersWanted = '';
+var numbersWanted = '';
+var specialCharactersWanted = '';
+
+while (uppercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'Y' && numbersWanted !== 'Y' && specialCharactersWanted !== 'Y') {
+  
+  uppercaseLettersWanted = window.prompt('Do you want to include uppercase letters, Y or N?').toUpperCase();
+  lowercaseLettersWanted = window.prompt("Do you want to include lowercase letters, Y or N?").toUpperCase();
+  numbersWanted = window.prompt("Do you want to include numbers, Y or N?").toUpperCase();
+  specialCharactersWanted = window.prompt("Do you want to include special characters, Y or N?").toUpperCase();
+
+  if (uppercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'Y' && numbersWanted !== 'Y' && specialCharactersWanted !== 'Y') {
+    alert('OOPS!  You did not select at least one character-set for your password.  Please try again!');
   }
 }
+
+while (uppercaseLettersWanted !== 'Y' && uppercaseLettersWanted !== 'N') {
+  uppercaseLettersWanted = window.prompt('Oops, you entered something other than Y or N.  Please answer again!  Do you want to include uppercase letters, Y or N?').toUpperCase();
+}
+
+console.log("Uppercase Letters Wanted: " + uppercaseLettersWanted);
+console.log("Lowercase Letters Wanted: " + lowercaseLettersWanted);
+console.log("Numbers Wanted: " + numbersWanted);
+console.log("Special Characters Wanted: " + specialCharactersWanted);
+
+
 
 
 var passwordInProgress = '';
