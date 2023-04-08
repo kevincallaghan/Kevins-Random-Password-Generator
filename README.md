@@ -30,7 +30,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-To learn how to validate my variable inputs for character type, I found a question on Stack Overflow that was very similar to the question I had regarding validation, and in the answers I found logic that was able to solve the problem I was having with requiring only Y or N inputs, and requiring at least one Y input.  The question/answer can be found here: https://stackoverflow.com/questions/48410637/can-i-use-a-while-loop-to-validate-a-prompt-input 
+1. To learn how to validate my variable inputs for character type, I found a question on Stack Overflow that was very similar to the question I had regarding validation, and in the answers I found logic that was able to solve the problem I was having with requiring only Y or N inputs, and requiring at least one Y input.  The question/answer can be found here: https://stackoverflow.com/questions/48410637/can-i-use-a-while-loop-to-validate-a-prompt-input 
+
+2. To learn how to pick a random item from my array, I found the information on css-tricks.com in an article titled, "Select Random Item from an Array" by Chris Coyier (2016).  He had a line of code that I used to create my random character.  The article can be found here: https://css-tricks.com/snippets/javascript/select-random-item-array/ 
+
+3. I found the correct usage of push(); to add my random character to the passwordInProgress= []; array in an article on freedocecamp.org by Joel Olawanle (2022).  The article can be found here: https://www.freecodecamp.org/news/how-to-insert-an-element-into-an-array-in-javascript/ 
+
+4. I found the correct usage of push(); to merge two arrays together on developer.mozilla.org.  I am using this to combine the character sets chosen by the user so I can randomly pull from and complete my password.  The article can be found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push 
 
 
 
