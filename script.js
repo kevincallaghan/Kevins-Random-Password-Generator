@@ -99,9 +99,18 @@ console.log("Special Characters Wanted: " + specialCharactersWanted);
 
 var passwordInProgress = '';
 
+
+
 if (uppercaseLettersWanted === 'Y') {
-//Figure out math functions to pick a random character from uooercaseLetters and add it to our passwordInProgress
+////Figure out math functions to pick a random character from uppercaseLetters
+// figure out how to add it to our passwordInProgress array
+  var test1 = uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+  console.log(test1);
 }
+
+
+
+
 
 if (lowercaseLettersWanted === 'Y') {
 
