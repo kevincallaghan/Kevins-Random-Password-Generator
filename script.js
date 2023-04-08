@@ -20,42 +20,44 @@ console.log("Number of Characters Wanted: " + passwordLength);
 
 // Do they want uppercase letters?
 
-//! var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  
+//// var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  
 
 //TODO if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
 
-//! console.log(uppercaseLettersWanted); to show how man Uppercase Letters Wanted
+//// console.log(uppercaseLettersWanted); to show how man Uppercase Letters Wanted
 
 // Do they want lowercase letters?
 
-//! var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  
+//// var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  
 
 //TODO if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
 
-//! console.log(lowercaseLettersWanted); to show how many Lowercase Letters Wanted
+//// console.log(lowercaseLettersWanted); to show how many Lowercase Letters Wanted
 
 // Do they want numbers?
 
-//! var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  
+//// var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  
 
 //TODO if Y I need to create function to randomly select a number from the array numbers
 
-//!console.log(numbersWanted); to show how many Numbers Wanted
+////console.log(numbersWanted); to show how many Numbers Wanted
 
 // Do they want special characters?
 
-//! var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  
+//// var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  
 
 //TODO if Y I need to create function to randomly select a special character from the array specialCharacters
 
-//! console.log(specialCharactersWanted); to show how many Special Characters Wanted
+//// console.log(specialCharactersWanted); to show how many Special Characters Wanted
 
-//! Did they pick at least one?  If not, they must select values again (use while if statement)
+//// Did they pick at least one?  If not, they must select values again (use while if statement)
+
 
 var uppercaseLettersWanted = '';
 var lowercaseLettersWanted = '';
 var numbersWanted = '';
 var specialCharactersWanted = '';
+
 
 while (uppercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'Y' && numbersWanted !== 'Y' && specialCharactersWanted !== 'Y') {
   
@@ -85,8 +87,6 @@ while (uppercaseLettersWanted !== 'Y' && lowercaseLettersWanted !== 'Y' && numbe
   }
 }
 
-
-
 console.log("Uppercase Letters Wanted: " + uppercaseLettersWanted);
 console.log("Lowercase Letters Wanted: " + lowercaseLettersWanted);
 console.log("Numbers Wanted: " + numbersWanted);
@@ -94,8 +94,26 @@ console.log("Special Characters Wanted: " + specialCharactersWanted);
 
 
 
+//TODO if any characters has input of Y I need to create function to randomly select a value from the array and add it to new array for the password we are generating
+
 
 var passwordInProgress = '';
+
+if (uppercaseLettersWanted === 'Y') {
+//Figure out math functions to pick a random character from uooercaseLetters and add it to our passwordInProgress
+}
+
+if (lowercaseLettersWanted === 'Y') {
+
+}
+
+if (numbersWanted === 'Y') {
+
+}
+
+if (specialCharactersWanted === 'Y') {
+
+}
 
 
 function generatePassword() {
@@ -160,9 +178,6 @@ function writePassword() {
 // THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
-
-
-
 
 
 // Add event listener to generate button
