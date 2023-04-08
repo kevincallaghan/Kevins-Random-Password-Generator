@@ -156,7 +156,6 @@ passwordInProgress.push(charactersSelectedForPassword[Math.floor(Math.random() *
 }
 
 
-
 console.log(passwordInProgress);
 
 function generatePassword() {
