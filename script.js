@@ -23,43 +23,6 @@ passwordLength = Number(passwordLength);
 console.log("Number of Characters Wanted: " + passwordLength);
 
 
-// Do they want uppercase letters?
-
-//// var uppercaseLettersWanted = window.prompt("Do you want to include uppercase Letters, Y or N?")  
-
-//// if Y I need to create function to randomly select an uppercase letter from the array uppercaseLetters
-
-//// console.log(uppercaseLettersWanted); to show how man Uppercase Letters Wanted
-
-// Do they want lowercase letters?
-
-//// var lowercaseLettersWanted = window.prompt("Do you want to include lowercase Letters, Y or N?")  
-
-//// if Y I need to create function to randomly select an lowercase letter from the array lowercaseLetters
-
-//// console.log(lowercaseLettersWanted); to show how many Lowercase Letters Wanted
-
-// Do they want numbers?
-
-//// var numbersWanted = window.prompt("Do you want to include numbers, Y or N?")  
-
-//// if Y I need to create function to randomly select a number from the array numbers
-
-////console.log(numbersWanted); to show how many Numbers Wanted
-
-// Do they want special characters?
-
-//// var specialCharactersWanted = window.prompt("Do you want to include Special Characters, Y or N?")  
-
-//// if Y I need to create function to randomly select a special character from the array specialCharacters
-
-//// console.log(specialCharactersWanted); to show how many Special Characters Wanted
-
-//Did they select any character types?
-
-//// Did they pick at least one?  If not, they must select values again (use while if statement)
-
-
 var uppercaseLettersWanted = '';
 var lowercaseLettersWanted = '';
 var numbersWanted = '';
@@ -100,10 +63,8 @@ console.log("Numbers Wanted: " + numbersWanted);
 console.log("Special Characters Wanted: " + specialCharactersWanted);
 
 
-//TODO if any characters has input of Y I need to create function to randomly select a value from the array and add it to new array for the password we are generating
-////Figure out math functions to pick a random character from uppercaseLetters
-//// figure out how to add it to our passwordInProgress array
 //See Credits #2 in README for link to article where I found math code, see Credits #3 for push();
+
 
 var passwordInProgress = [];
 
@@ -125,8 +86,8 @@ if (specialCharactersWanted === 'Y') {
 
 console.log(passwordInProgress);
 
-//TODO create an array of all characters selected by the user
-//See Credits #4 to see article explaining how to merge two arrays with .push()
+
+//See Credits #4 in README to see article explaining how to merge two arrays with .push()
 
 var charactersSelectedForPassword = [];
 
@@ -159,13 +120,10 @@ for (var i = passwordInProgressCount; i < passwordLength; i++) {
 
 console.log('password in progress is ' + passwordInProgress);
 
-//TODO Turn the passwordInProgress array into a single string item and display it in the html
-
-
-
 function generatePassword() {
 }
 
+//TODO Turn the passwordInProgress array into a single string item and display it in the html
 
 // Write password to the #password input
 function writePassword() {
@@ -173,7 +131,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = passwordInProgress.join('');
-
 }
 
 //Alert to click red Generate button
