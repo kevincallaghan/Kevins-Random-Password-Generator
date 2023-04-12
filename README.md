@@ -42,6 +42,8 @@ Preview of initial page:
 
 4. I found the correct usage of push(); to merge two arrays together on developer.mozilla.org.  I am using this to combine the character sets chosen by the user so I can randomly pull from and complete my password.  The article can be found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push 
 
+5. This is another source for figuring out how to push all elements from the array with the spread operator I found on developer.mozilla.org in an article called "Spread Syntax(...).  Here is the link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
 
 ## License
 
